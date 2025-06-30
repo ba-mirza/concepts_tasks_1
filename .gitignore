@@ -1,0 +1,19 @@
+# Игнорировать target во всех подпапках
+*/target/
+*/target/**
+
+# Игнорировать Cargo.lock для библиотек (оставить для бинарных проектов)
+*/Cargo.lock
+
+# IDE файлы
+*/.vscode/
+*/.idea/
+*/rust-project.json
+
+# Бэкапы
+**/*.rs.bk
+**/*~
+
+# OS файлы  
+.DS_Store
+Thumbs.db
