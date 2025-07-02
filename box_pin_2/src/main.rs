@@ -7,6 +7,11 @@ trait SayHi: fmt::Debug {
     }
 }
 
+#[allow(unused)]
+trait MutMeSomehow {
+    fn mut_me_somehow(self: Pin<&mut Self>);
+}
+
 impl<T: fmt::Debug> SayHi for Box<T> {
     fn say_hi(self: Pin<&Self>) {
         println!("Hi from Box<{:?}>", self.get_ref());
