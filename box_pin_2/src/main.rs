@@ -3,12 +3,6 @@ use traits::*;
 
 use std::{pin::Pin, rc::{Rc}};
 
-#[allow(unused)]
-trait MutMeSomehow {
-    fn mut_me_somehow(self: Pin<&mut Self>);
-}
-
-
 fn main() {
 
     let byte_slice: &[u8] = "Hello, world!".as_bytes();

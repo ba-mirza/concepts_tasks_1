@@ -39,3 +39,13 @@ impl SayHi for [u8] {
         println!("Hi from &[u8]<{:?}>", self.get_ref());
     }
 }
+
+pub trait MutMeSomehow {
+    fn mut_me_somehow(self: Pin<&mut Self>);
+}
+
+impl<T: fmt::Debug> MutMeSomehow for Box<T> {
+    fn mut_me_somehow(self: Pin<&mut Self>) {
+        println!("Mutating Box<{:?}>", self.get_mut());        
+    }
+}
